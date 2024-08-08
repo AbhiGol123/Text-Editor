@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="fixed-group">
+            <h1 style="text-align: center; margin-bottom:30px">Configuration Details</h1>
+            <div class="form-group">
+                <label for="port">Port<span class="required">*</span></label>
+                <input id="port" type="number" placeholder="Enter port number" required>
+
+                <label for="server_name">Server Name<span class="required">*</span></label>
+                <input id="server_name" type="text" placeholder="Enter server name" required>
+
+                <!--SSL Configuration-->
+                <label for="ssl_certificate">SSL Certificate<span class="required">*</span></label>
+                <input id="ssl_certificate" type="text" placeholder="Enter ssl certificate path" required>
+
+                <label for="ssl_certificate_key">SSL Certificate Key<span class="required">*</span></label>
+                <input id="ssl_certificate_key" type="text" placeholder="Enter ssl certificate key path" required>
+
+                <label for="ssl_protocols">SSL Protocols (e.g TLSv1.2 TLSv1.3)</label>
+                <input id="ssl_protocols" type="text" placeholder="Default protocols: TLSv1.2 TLSv1.3">
+
+                <label for="ssl_ciphers">SSL Ciphers (e.g HIGH:!aNULL:!MD5)</label>
+                <input id="ssl_ciphers" type="text" placeholder="Default ciphers: HIGH:!aNULL:!MD5">
+
+                <label for="ssl_prefer_server_ciphers">SSL Prefer Server ciphers</label>
+                <input id="ssl_prefer_server_ciphers" type="text" placeholder="Default ssl prefer server ciphers: on">
+
+                <!--Root and Index-->
+                <label for="root">Root Path<span class="required">*</span></label>
+                <input id="root" type="text" placeholder="Enter root file path" required>
+
+                <label for="index">Index Files (e.g index.html index.htm)<span class="required">*</span></label>
+                <input id="index" type="text" placeholder="Enter index files" required>
+
+                <!--Reverse Proxy-->
+                <label for="proxy_location">Proxy Location Path<span class="required">*</span></label>
+                <input id="proxy_location" type="text" placeholder="Enter proxy location path" required>
+
+                <label for="proxy_pass">Proxy Pass URL<span class="required">*</span></label>
+                <input id="proxy_pass" type="text" placeholder="Enter proxy pass URL" required>
+
+                <!--Error Pages-->
+                <label for="error_page_404">404 Error Page Path<span class="required">*</span></label>
+                <input id="error_page_404" type="text" placeholder="Enter 404 error page path" required>
+
+                <label for="error_page_50x">50x Error Page Path<span class="required">*</span></label>
+                <input id="error_page_50x" type="text" placeholder="Enter 50x error page path" required>
+
+                <!--Static Files Caching-->
+                <label for="static_files_types">Static caching Files Types (e.g jpg|jpeg|png|css|js)</label>
+                <input id="static_files_types" type="text" placeholder="Default static caching file types: jpg|jpeg|png|css|js">
+
+                <label for="static_files_expires">Caching Files Expiry (days)</label>
+                <input id="static_files_expires" type="number" placeholder="Default static caching files expiry: 7d">
+
+                <label for="static_files_headers">Add Header For Caching Files</label>
+                <input id="static_files_headers" type="text" placeholder="Default add header for caching files: public, no-transform">
+
+                <!--Deny Access to Hidden Files-->
+                <label for="hidden_files">Hidden Files (e.g ht|js)</label>
+                <input id="hidden_files" type="text" placeholder="Default Deny Access to Hidden Files: ht">
+
+                <label for="deny_hidden_files">Deny Access to Hidden Files</label>
+                <input id="deny_hidden_files" type="text" placeholder="Default Deny Access to Hidden Files: all">
+            </div>
+
+            <br><br>
+            <button id="save">Save Configuration</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
